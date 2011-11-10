@@ -1,5 +1,7 @@
 == Welcome to Rails
 
+This is the first part of the class Tutorial on building a Laptop Store
+
 Rails is a web-application framework that includes everything needed to create
 database-backed web applications according to the Model-View-Control pattern.
 
