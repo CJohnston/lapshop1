@@ -5,7 +5,7 @@
     <th>Name</th>
     <th>Description</th>
     <th>Price</th>
-    <th></th>
+    <th>UserID</th>
     <th></th>
     <th></th>
   </tr>
@@ -15,6 +15,7 @@
     <td><%= product.name %></td>
     <td><%= product.description %></td>
     <td><%= product.price %></td>
+    <td><%= product.user_id %></td>
     <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>

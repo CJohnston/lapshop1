@@ -1,9 +1,16 @@
 Lapshop1::Application.routes.draw do
+  get "users/new"
+
   get "welcome/home"
   get "welcome/thank_you"
   get "welcome/register"
+  match '/login' => "sessions#new", :as => "login"
+match '/logout' => "sessions#destroy", :as => "logout"
+
 
   resources :products
+  resources :users
+  resources :sessions
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
