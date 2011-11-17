@@ -44,7 +44,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.xml
   def create
-    @product = current_user.Products.new(params[:product])
+    @product = current_user.products.new(params[:product])
 
     respond_to do |format|
       if @product.save
