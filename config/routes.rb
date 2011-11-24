@@ -1,16 +1,21 @@
 Lapshop1::Application.routes.draw do
+  resources :line_items
+
+  resources :carts
+
   get "users/new"
 
   get "welcome/home"
   get "welcome/thank_you"
   get "welcome/register"
-  match '/login' => "sessions#new", :as => "login"
-match '/logout' => "sessions#destroy", :as => "logout"
-
 
   resources :products
   resources :users
   resources :sessions
+
+  match '/your_cart' => "carts#your_cart", :as => "your_cart"
+  match '/login' => "sessions#new", :as => "login"
+  match '/logout' => "sessions#destroy", :as => "logout"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -68,4 +73,6 @@ match '/logout' => "sessions#destroy", :as => "logout"
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+
+
 end
